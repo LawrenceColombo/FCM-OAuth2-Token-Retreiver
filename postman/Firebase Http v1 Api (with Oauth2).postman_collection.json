@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "05881d22-f74d-4179-a906-4801abdec2db",
+		"name": "Firebase Http v1 Api (with Oauth2)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://fcm.googleapis.com/v1/projects/nb-firebase-poc/messages:send",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"message\": {\n\t\t\n\t\t\"notification\": {\n\t\t\t\"title\": \"Test Title\",\n\t\t\t\"body\": \"Test Body\"\n\t\t},\n\t\n\t\t\"token\": \"{{token}}\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/v1/projects/{{project_id}}/messages:send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"projects",
+						"{{project_id}}",
+						"messages:send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
