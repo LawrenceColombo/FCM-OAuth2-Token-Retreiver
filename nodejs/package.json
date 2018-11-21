@@ -1,0 +1,17 @@
+{
+  "name": "nodejs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./lib/app",
+    "build": "babel src -d lib"
+  },
+  "dependencies": {
+    "googleapis": "^35.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6"
+  }
+}
