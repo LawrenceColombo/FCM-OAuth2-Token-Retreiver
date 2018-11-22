@@ -1,7 +1,8 @@
 # NodeJS FCM OAuth2 Token Retriever
 
 ## Usage
-- Download your service-key.json file from your project's Firebase Console
+- Download your service-key.json file from your project's Firebase Console by going
+  to Settings > Service Accounts > Generate New Private Key
 - Place the json file in the `/resources` folder
 - Rename the file to `service-key.json`
 - run `npm install` to install missing node modules
