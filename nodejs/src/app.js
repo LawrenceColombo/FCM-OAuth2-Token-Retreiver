@@ -1,4 +1,4 @@
-const { google } = require('googleapis');
+const {google} = require('googleapis');
 const MESSAGING_SCOPE = 'https://www.googleapis.com/auth/firebase.messaging';
 const SCOPES = [MESSAGING_SCOPE];
 
@@ -29,8 +29,12 @@ function getAccessToken() {
  * Log valid access token
  */
 function logToken() {
-    getAccessToken().then(function (accessToken) {
-        console.log("Access Token: " + accessToken)
+    getAccessToken()
+        .then(function (accessToken) {
+            console.log("Access Token: " + accessToken);
+        })
+        .catch(function (err) {
+            console.log('error: ', err);
     });
 }
 
