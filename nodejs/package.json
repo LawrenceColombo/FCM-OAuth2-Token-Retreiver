@@ -7,7 +7,7 @@
     "build": "babel src -d lib"
   },
   "dependencies": {
-    "googleapis": "^35.0.0"
+    "googleapis": "^39.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
